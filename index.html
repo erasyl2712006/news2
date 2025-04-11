@@ -2,20 +2,54 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Новости Казахстана</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><div class="container"><h1>Новости Казахстана</h1><nav><a href="index.html">Главная</a> <a href="login.html">Вход</a></nav></div></header>
-  <div class="layout container">
-    <aside><h3>Меню</h3><ul><li><a href="index.html">Лента</a></li></ul></aside>
-    <main>
+  <header class="header">
+    <div class="container">
+      <h1>Новости Казахстана</h1>
+      <nav>
+        <a href="index.html">Главная</a>
+        <a href="login.html">Вход</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="filter">
+      <select id="category-filter">
+        <option value="">Все категории</option>
+        <option value="Политика">Политика</option>
+        <option value="Экономика">Экономика</option>
+        <option value="Общество">Общество</option>
+        <option value="Технологии">Технологии</option>
+      </select>
       <input type="text" id="search" placeholder="Поиск новостей...">
-      <div id="news-list"></div>
-      <button id="load-more">Загрузить ещё</button>
-    </main>
-  </div>
-  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
+    </div>
+    <div id="news-list" class="news-list"></div>
+    <button id="load-more">Загрузить ещё</button>
+  </main>
+  <section class="featured">
+    <div class="container">
+      <h2>Избранные новости</h2>
+      <div class="slider">
+        <div class="slide">Избранная новость 1</div>
+        <div class="slide">Избранная новость 2</div>
+        <div class="slide">Избранная новость 3</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Новости Казахстана</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="slider.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
