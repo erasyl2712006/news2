@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Детали новости</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><div class="container"><h1>Новости Казахстана</h1><nav><a href="index.html">Главная</a></nav></div></header>
+  <main class="container">
+    <div id="news-detail"></div>
+    <h3>Оставить комментарий</h3>
+    <form id="comment-form">
+      <input type="text" id="name" placeholder="ФИО" required>
+      <input type="email" id="email" placeholder="Email" required>
+      <input type="tel" id="phone" placeholder="Телефон" required>
+      <textarea id="comment-text" placeholder="Комментарий" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+    <h3>Комментарии</h3>
+    <div id="comments-section"></div>
+  </main>
+  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
+  <script src="news.js"></script>
+</body>
+</html>
