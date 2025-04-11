@@ -2,20 +2,20 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Вход в админку</title>
+  <title>Вход</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container" style="margin-top: 100px; max-width: 400px;">
-    <h2>Вход в админку</h2>
+  <header><div class="container"><h1>Вход</h1><nav><a href="index.html">Главная</a></nav></div></header>
+  <main class="container">
     <form id="login-form">
-      <input type="text" id="login" placeholder="Логин" required>
+      <input type="text" id="username" placeholder="Имя пользователя" required>
       <input type="password" id="password" placeholder="Пароль" required>
       <button type="submit">Войти</button>
     </form>
-    <p id="login-error" style="color: red; display: none;">Неверный логин или пароль</p>
+    <div id="login-result"></div>
   </main>
-
+  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
   <script src="login.js"></script>
 </body>
 </html>

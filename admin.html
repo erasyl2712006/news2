@@ -2,43 +2,13 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Админ-панель | Новости Казахстана</title>
+  <title>Админ-панель</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="header">
-    <div class="container">
-      <h1>Админ-панель</h1>
-      <nav><a href="index.html">На сайт</a>
-        <a href="#" id="logout">Выйти</a></nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section>
-      <h2>Добавить / Редактировать новость</h2>
-      <form id="news-form">
-        <input type="hidden" id="news-id">
-        <input type="text" id="news-title" placeholder="Заголовок" required>
-        <input type="text" id="news-category" placeholder="Категория" required>
-        <input type="text" id="news-author" placeholder="Автор" required>
-        <textarea id="news-content" placeholder="Содержание" required></textarea>
-        <button type="submit">Сохранить</button>
-      </form>
-    </section>
-
-    <section>
-      <h2>Все новости</h2>
-      <div id="admin-news-list" class="news-list"></div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="container">
-      <p>&copy; 2025 Новости Казахстана</p>
-    </div>
-  </footer>
-
+  <header><div class="container"><h1>Админ-панель</h1><nav><a href="index.html">На сайт</a></nav></div></header>
+  <main class="container"><h2>Все комментарии</h2><div id="admin-comments"></div></main>
+  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
   <script src="admin.js"></script>
 </body>
 </html>
