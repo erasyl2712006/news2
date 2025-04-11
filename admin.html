@@ -8,6 +8,25 @@
 <body>
   <header><div class="container"><h1>Админ-панель</h1><nav><a href="index.html">На сайт</a></nav></div></header>
   <main class="container"><h2>Все комментарии</h2><div id="admin-comments"></div></main>
+  <main class="container">
+    <section>
+      <h2>Добавить / Редактировать новость</h2>
+      <form id="news-form">
+        <input type="hidden" id="news-id">
+        <input type="text" id="news-title" placeholder="Заголовок" required>
+        <input type="text" id="news-category" placeholder="Категория" required>
+        <input type="text" id="news-author" placeholder="Автор" required>
+        <textarea id="news-content" placeholder="Содержание" required></textarea>
+        <button type="submit">Сохранить</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Все новости</h2>
+      <div id="admin-news-list" class="news-list"></div>
+    </section>
+  </main>
+
   <footer><p>&copy; 2025 Новости Казахстана</p></footer>
   <script src="admin.js"></script>
 </body>
