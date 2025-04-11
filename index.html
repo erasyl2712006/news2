@@ -6,7 +6,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><div class="container"><h1>Новости Казахстана</h1><nav><a href="index.html">Главная</a> <a href="login.html">Вход</a></nav></div></header>
+  <header class="header">
+    <div class="container">
+      <h1>Новости Казахстана</h1>
+      <nav><a href="admin.html">Админка</a></nav>
+    </div>
+  </header>
+  
+  <main class="container">
+    <input type="text" id="search" placeholder="Поиск новостей..." />
+    <div id="news-list" class="news-list"></div>
+  </main>
+  
+  <script src="main.js"></script>
   <div class="layout container">
     <aside><h3>Меню</h3><ul><li><a href="index.html">Лента</a></li></ul></aside>
     <main>
@@ -15,7 +27,9 @@
       <button id="load-more">Загрузить ещё</button>
     </main>
   </div>
-  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
+  <footer class="footer">
+    <div class="container"><p>&copy; 2025 Новости Казахстана</p></div>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
