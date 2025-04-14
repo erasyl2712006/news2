@@ -141,6 +141,14 @@ body.dark .theme-toggle {
   background-color: #ccc;
   color: #000;
 }
+body.dark .main  {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+body.dark .aside {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
 form {
   background: white;
   padding: 15px;
