@@ -1,22 +1,66 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: #f4f4f4;
+  font-family: 'Inter', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
 }
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: auto;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
 }
 header {
-  background: #0077cc;
-  color: white;
-  padding: 20px 0;
+  background-color: #fff;
+  padding: 15px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 80px;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 24px;
+  font-weight: bold;
 }
 nav a {
   color: white;
   margin: 0 10px;
   text-decoration: none;
+}
+.login-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.login-btn:hover {
+  background-color: #0056b3;
+}
+.search-bar {
+  margin: 20px 0;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
 }
 .layout {
   display: flex;
@@ -33,13 +77,7 @@ main {
   background: #fff;
   padding: 20px;
 }
-footer {
-  background: #222;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-  margin-top: 40px;
-}
+
 input, textarea {
   width: 100%;
   padding: 8px;
@@ -53,20 +91,53 @@ button {
   cursor: pointer;
 }
 .news-card {
-  border-bottom: 1px solid #ccc;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-}
-.header, .footer {
-  background: #1e88e5;
-  color: white;
-  padding: 1em;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s;
 }
 
-.header h1, .footer p {
-  margin: 0;
+.news-card:hover {
+  transform: translateY(-4px);
 }
 
+.news-card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #222;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #555;
+}
+body.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+body.dark .header {
+  background-color: #1e1e1e;
+}
+
+body.dark .news-card {
+  background-color: #1e1e1e;
+  color: #ddd;
+}
+
+body.dark .login-btn {
+  background-color: #444;
+}
+
+body.dark .login-btn:hover {
+  background-color: #666;
+}
+
+body.dark .theme-toggle {
+  background-color: #ccc;
+  color: #000;
+}
 form {
   background: white;
   padding: 15px;
@@ -97,4 +168,136 @@ form button {
   border-left: 4px solid #1e88e5;
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+.news-detail h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.news-detail .date {
+  color: #888;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.comments-section {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.comments-section h3 {
+  margin-top: 0;
+}
+
+.comment {
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.comment:last-child {
+  border-bottom: none;
+}
+
+.reply-btn {
+  background: transparent;
+  border: none;
+  color: #007bff;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 0;
+}
+
+.comment-form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.comment-form textarea {
+  padding: 10px;
+  font-size: 15px;
+  resize: vertical;
+  height: 80px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.comment-form button {
+  align-self: flex-start;
+  background-color: #28a745;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.comment-form button:hover {
+  background-color: #218838;
+}
+.admin-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.edit-btn,
+.delete-btn {
+  background-color: #ffc107;
+  border: none;
+  color: black;
+  padding: 6px 12px;
+  margin-left: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+.login-container {
+  max-width: 400px;
+  margin-top: 80px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.login-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
 }

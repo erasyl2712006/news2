@@ -6,16 +6,28 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header><div class="container"><h1>Новости Казахстана</h1><nav><a href="index.html">Главная</a> <a href="login.html">Вход</a></nav></div></header>
+  <header class="header">
+    <div class="container header-inner">
+      <h1>Новостной портал</h1>
+      <button onclick="window.location.href='login.html'" class="login-btn">Вход</button>
+    </div>
+  </header>
   <div class="layout container">
-    <aside><h3>Меню</h3><ul><li><a href="index.html">Лента</a></li></ul></aside>
+    <aside>
+      <h3>Меню</h3>
+      <ul>
+        <li><a href="index.html">Лента</a></li>
+      </ul>
+    </aside>
     <main>
-      <input type="text" id="search" placeholder="Поиск новостей...">
-      <div id="news-list"></div>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Поиск новостей..." />
+        <button id="toggleTheme" class="theme-toggle">🌓 Тема</button>
+      </div>
+      <section id="news-list"></section>
       <button id="load-more">Загрузить ещё</button>
     </main>
   </div>
-  <footer><p>&copy; 2025 Новости Казахстана</p></footer>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 const newsList = document.getElementById("news-list");
-const searchInput = document.getElementById("search");
+const searchInput = document.getElementById("searchInput");
 const loadMoreBtn = document.getElementById("load-more");
 
 let allNews = [...Array(20).keys()].map(i => ({
@@ -7,6 +7,7 @@ let allNews = [...Array(20).keys()].map(i => ({
   title: `Новость #${i + 1}`,
   text: `Подробности казахстанской новости номер ${i + 1}...`
 }));
+
 let visibleNews = 0;
 const perPage = 5;
 
@@ -34,3 +35,32 @@ loadMoreBtn.addEventListener("click", () => {
 
 visibleNews = perPage;
 renderNews();
+
+// Тёмная тема
+const toggleBtn = document.getElementById('toggleTheme');
+toggleBtn?.addEventListener('click', () => {
+  document.body.classList.toggle('dark');
+});
+
+// Поиск по новостям
+searchInput?.addEventListener('input', () => {
+  const query = searchInput.value.toLowerCase();
+
+  const newsCards = document.querySelectorAll('.news-card');
+  newsCards.forEach(card => {
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const text = card.querySelector('p').textContent.toLowerCase();
+
+    const matches = title.includes(query) || text.includes(query);
+    card.style.display = matches ? 'block' : 'none';
+  });
+});
+
+// Случайная новость
+window.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".news-card");
+  if (cards.length > 0) {
+    const randomIndex = Math.floor(Math.random() * cards.length);
+    cards[randomIndex].style.border = "2px solid #007bff";
+  }
+});
