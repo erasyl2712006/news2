@@ -11,6 +11,9 @@ body {
   margin: 0 auto;
   padding: 20px;
 }
+input, textarea {
+  box-sizing: border-box;
+}
 header {
   background-color: #fff;
   padding: 15px 20px;
