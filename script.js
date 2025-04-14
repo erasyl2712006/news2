@@ -36,13 +36,11 @@ loadMoreBtn.addEventListener("click", () => {
 visibleNews = perPage;
 renderNews();
 
-// Тёмная тема
 const toggleBtn = document.getElementById('toggleTheme');
 toggleBtn?.addEventListener('click', () => {
   document.body.classList.toggle('dark');
 });
 
-// Поиск по новостям
 searchInput?.addEventListener('input', () => {
   const query = searchInput.value.toLowerCase();
 
@@ -56,7 +54,6 @@ searchInput?.addEventListener('input', () => {
   });
 });
 
-// Случайная новость
 window.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".news-card");
   if (cards.length > 0) {
