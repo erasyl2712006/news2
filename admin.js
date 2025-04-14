@@ -102,3 +102,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   renderAdminNews();
 });
+const newsForm = document.getElementById("admin-news-form");
+
+newsForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const title = document.getElementById("title").value;
+  const text = document.getElementById("text").value;
+
+  const newNews = {
+    id: Date.now(), // уникальный ID
+    title,
+    text
+  };
+
+  const existingNews = JSON.parse(localStorage.getItem("allNews") || "[]");
+  existingNews.push(newNews);
+  localStorage.setItem("allNews", JSON.stringify(existingNews));
+
+  alert("Новость добавлена!");
+  newsForm.reset();
+});
